@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysqldb:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    volumes:
+       - ~/docker-yml/mysqldb/db-vol:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=test_db
+      - MYSQL_USER=test_user
+      - MYSQL_PASSWORD=changeme
+      - MYSQL_ROOT_PASSWORD=changeme
